@@ -5,6 +5,9 @@
             [cljsjs.vega-embed]
             [cljsjs.vega-tooltip]))
 
+(defn log [a-thing]
+  (.log js/console a-thing))
+
 (defn render-vega-lite
   ([spec elem]
    (when spec
