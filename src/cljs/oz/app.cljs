@@ -9,9 +9,6 @@
 (timbre/set-level! :info)
 (enable-console-print!)
 
-(defn log [a-thing]
-  (.log js/console a-thing))
-
 (defonce app-state (r/atom {:text "Pay no attention to the man behind the curtain!"
                             :view-spec nil}))
 
