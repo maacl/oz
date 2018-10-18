@@ -71,17 +71,3 @@
                (reduce merge (rest x))]
               x))
     spec))
-
-
-(defn application [app-state]
-  (when-let [spec (:view-spec @app-state)]
-    [view-spec spec]))
-
-(r/render-component [application app-state]
-                    (. js/document (getElementById "app")))
-
-(defn on-js-reload []
-  ;; optionally touch your app-state to force rerendering depending on
-  ;; your application
-  ;; (swap! app-state update-in [:__figwheel_counter] inc)
-  )
