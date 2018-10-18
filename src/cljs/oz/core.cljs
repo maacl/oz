@@ -1,4 +1,4 @@
-(ns ^:figwheel-always oz.core
+(ns oz.core
   (:require [reagent.core :as r]
             [cljsjs.vega]
             [cljsjs.vega-lite]
