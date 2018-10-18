@@ -1,9 +1,10 @@
-(ns ^:figwheel-always oz.core
+(ns ^:figwheel-always oz.app
   (:require [reagent.core :as r]
             [taoensso.encore :as encore :refer-macros (have)]
             [taoensso.timbre :as timbre :refer-macros (debugf)]
             [taoensso.sente :as sente]
-            [taoensso.sente.packers.transit :as sente-transit]))
+            [taoensso.sente.packers.transit :as sente-transit]
+            [oz.core]))
 
 (timbre/set-level! :info)
 (enable-console-print!)
@@ -66,3 +67,5 @@
 
 (defn start! []
   (start-router!))
+
+(start!)
